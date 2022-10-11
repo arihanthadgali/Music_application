@@ -1,0 +1,32 @@
+.home-table{
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    
+}
+.home-table td {
+    height: 50px;
+    text-align: center;
+  
+}
+.home-table th{
+    background-color: blueviolet;
+    color: white;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+.home-table tr:nth-child(even){
+    color: #ce1b1b;
+}
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  .on {
+    color: #000;
+  }
+  .off {
+    color: #ccc;
+  }
