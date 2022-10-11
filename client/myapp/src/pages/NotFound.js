@@ -1,6 +1,6 @@
 import React from "react";
-function NOtFound() {
+function NotFound() {
   return <h1>NOtFound</h1>;
 }
 
-export default NOtFound;
+export default NotFound;

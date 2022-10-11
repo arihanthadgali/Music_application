@@ -1,4 +1,6 @@
 {
   "git.enabled": true,
-  "git.decorations.enabled": true
+  "git.decorations.enabled": true,
+  "git.allowForcePush": true,
+  "git.autofetch": true
 }
