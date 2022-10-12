@@ -6,7 +6,7 @@ function Songs() {
   return (
     <div>
       <button
-        class="btn-add"
+        className="btn-add"
         onClick={() => {
           setModal(true);
         }}
@@ -14,7 +14,7 @@ function Songs() {
         +Add song
       </button>
       {openModal && <Modal closeModal={setModal} />}
-      <table class="song-table">
+      <table className="song-table">
         <tr>
           <th>cover</th>
           <th>Song</th>

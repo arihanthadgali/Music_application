@@ -3,7 +3,7 @@ import React from "react";
 function Home() {
   return (
     <div>
-      <table class="home-table">
+      <table className="home-table">
         <tr>
           <th>Artwork</th>
           <th>Song</th>
