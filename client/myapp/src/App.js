@@ -5,12 +5,15 @@ import About from "./pages/About";
 import Songs from "./pages/Songs";
 import { Route, Routes } from "react-router-dom";
 import React from "react";
+import ReactStars from "react-rating-stars-component";
 
 function App() {
   return (
     <>
-      <Navbar />
-
+      <>
+        <Navbar />
+        <ReactStars />
+      </>
       <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />

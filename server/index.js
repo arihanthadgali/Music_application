@@ -1,6 +1,7 @@
 import express from "express";
 import { createConnection } from "mysql";
 import cors from "cors";
+import e from "express";
 
 const app = express();
 app.use(cors());
@@ -15,13 +16,13 @@ const db = createConnection({
 });
 
 app.post("/add", (req, res) => {
-  const song = req.body.song;
-  const date = req.body.date;
-  const artWork = req.body.artWork;
+  const name = req.body.name;
+  const dob = req.body.dob;
+  const bio = req.body.bio;
 
   db.query(
-    "INSERT INTO music-db(song,dor) VALUES(?,?)",
-    [song, date],
+    "INSERT INTO artists(name,dob,bio) VALUES(?,?,?)",
+    [name, dob, bio],
     (err, result) => {
       if (err) {
         console.log(err);
@@ -31,6 +32,16 @@ app.post("/add", (req, res) => {
     }
   );
 });
+
+// db.connect(function (err) {
+//   if (err) throw err;
+//   console.log("connected");
+//   var sql = "INSERT INTO artists(name,dob,bio) VALUES('kdsbb','sjyf','sjbgfj')";
+//   db.query(sql, function (err, result) {
+//     if (err) throw err;
+//     console.log("record inserted");
+//   });
+// });
 app.listen(3006, () => {
   console.log("hey there u are connected");
 });
