@@ -1,25 +1,32 @@
 import React from "react";
-import Modal from "../components/Modal";
 import { useState } from "react";
+import "../components/songs.css";
+import AddArtist from "../components/AddArtist";
+
 function Songs() {
-  const [openModal, setOpenModal] = useState(false);
+  const [artist, setartist] = useState(false);
+
   return (
     <div>
       <button
         className="btn-add"
         onClick={() => {
-          setOpenModal(true);
+          setartist(true);
         }}
       >
-        +Add song
+        +Add Artist
       </button>
-      {openModal && <Modal closeModal={setOpenModal} />}
+      <br />
+      {artist && <AddArtist closeartist={setartist} />}
+
       <table className="song-table">
         <tbody>
           <tr>
-            <th>name</th>
-            <th>dob</th>
-            <th>bio</th>
+            <th>Artwork</th>
+            <th>Song</th>
+            <th>Date of release</th>
+            <th>Artists</th>
+            <th>Rate</th>
           </tr>
         </tbody>
       </table>

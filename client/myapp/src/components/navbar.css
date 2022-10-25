@@ -7,7 +7,7 @@
   }
   
   .container {
-    margin: 1rem;
+    margin: 0rem;
     text-align: center;
   }
   
@@ -19,6 +19,7 @@
     align-items: flex-start;
     gap: 2rem;
     padding: 0 1rem;
+    margin: 1rem;
   }
   
   .site-title {
@@ -33,9 +34,9 @@
     gap: 1rem;
   }
   .nav ul input{
-    
+    border-radius: 4px;
     float: right;
-    padding: 7px;
+    padding: 5px;
     border: none;
     margin-top: 6px;
     margin-right: 10px;
@@ -57,4 +58,10 @@
   
   .nav li:hover {
     background-color: #777;
+  }
+  
+  .nav ul button{
+    border-radius: 4px;
+    color:black;
+    background-color: white;
   }

@@ -6,6 +6,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+
 var db = createConnection({
   port: "3000",
   user: "root",
@@ -30,16 +31,6 @@ app.post("/addartist", (req, res) => {
       }
     }
   );
-});
-
-app.get("/addartistdata", (req, res) => {
-  db.query("select * from artist_data", (err, result) => {
-    if (err) {
-      console.log(err);
-    } else {
-      res.send(result);
-    }
-  });
 });
 
 app.listen(3006, () => {

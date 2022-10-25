@@ -1,12 +1,31 @@
+import Axios from "axios";
 import React from "react";
 import ReactStars from "react-rating-stars-component";
+import Songform from "../components/Songform";
 
 function Home() {
   const rating = () => {
     alert("you have changed rating");
   };
+
+  const getartistdata = () => {
+    Axios.get("http://localhost:3006/addartistdata").then((response) => {
+      console.log(response);
+    });
+  };
   return (
     <div>
+      <h1>Top 10 Songs</h1>
+
+      <button
+        onClick={() => {
+          <Songform />;
+        }}
+      >
+        +Add Song
+      </button>
+      <button onClick={getartistdata()}>show data</button>
+
       <table className="home-table">
         <tbody>
           <tr>

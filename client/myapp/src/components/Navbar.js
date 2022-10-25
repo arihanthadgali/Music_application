@@ -1,14 +1,21 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
-import React from "react";
+// import React, { useState } from "react";
 
 export default function Navbar() {
+  // const [searchTerm, setSearchTerm] = useState("");
   return (
     <nav className="nav">
       <Link to="/" className="Music-title">
         Music
       </Link>
       <ul>
-        <input type="text" placeholder="search"></input>
+        <input
+          type="text"
+          placeholder="search"
+          // onChange={(event) => {
+          //   setSearchTerm(event.target.value);
+          // }}
+        ></input>
         <button type="submit">submit</button>
         <CustomLink to="/home">Home</CustomLink>
         <CustomLink to="/songs">Songs</CustomLink>
@@ -16,6 +23,19 @@ export default function Navbar() {
         <CustomLink to="/about">About</CustomLink>
       </ul>
     </nav>
+    // {music-db.filter((val)=>{
+    //   if(searchTerm==""){
+    //     return val
+    //   }else if(val.name.toLowerCase().include(searchTerm.toLowerCase()){
+    //     return val
+    //   })
+    // })map(val,key)=>{
+    //   return(
+    //     <div className="user" key={key}>
+    //       <p>{val.name}</p>
+    //     </div>
+    //   )
+    // }}
   );
 }
 

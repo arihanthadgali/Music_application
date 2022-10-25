@@ -1,14 +1,26 @@
 .song-table{
-    border: none;
-    border-collapse: collapse;
-    width: 100%;
-    
+  background-color:blueviolet;
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 0 1rem;
+  margin: 1rem;
+}
+.song-table tr{
+  padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 6rem;
 }
 .btn-add{
     float: left ;
     box-sizing: border-box;
-    size: 100px;
+    size: 200px;
     position: absolute;
+    margin-left: 30%;
 }
 /* Modal design*/
 .modalBackground {
@@ -55,7 +67,7 @@
     flex: 20%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     font-size: 1.5rem;
     text-align: center;
   }
