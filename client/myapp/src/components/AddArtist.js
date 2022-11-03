@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./songs.css";
+import "../Styles/songs.css";
 import Axios from "axios";
 
 function AddArtist({ closeartist }) {
@@ -56,7 +56,7 @@ function AddArtist({ closeartist }) {
         </div>
 
         <div className="footer">
-          <button onClick={artist()}>Add</button>
+          <button onClick={artist}>Add</button>
           <button
             onClick={() => {
               closeartist(false);

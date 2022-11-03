@@ -1,23 +1,29 @@
 import React from "react";
 import { useState } from "react";
-import "../components/songs.css";
-import AddArtist from "../components/AddArtist";
+import "../Styles/songs.css";
+import Songdata from "../components/AddSong";
+// import Popup from "reactjs-popup";
 
-function Songs() {
-  const [artist, setartist] = useState(false);
+function Songs(newrating) {
+  const [song, setsong] = useState(false);
 
   return (
     <div>
       <button
         className="btn-add"
         onClick={() => {
-          setartist(true);
+          setsong(true);
         }}
       >
-        +Add Artist
+        +Add Song
       </button>
-      <br />
-      {artist && <AddArtist closeartist={setartist} />}
+
+      {/* <Popup trigger={<button> add song</button>} position="right center">
+        <div>Popup content here !!</div>
+      </Popup>
+
+      <br /> */}
+      {song && <Songdata closeSong={setsong} />}
 
       <table className="song-table">
         <tbody>

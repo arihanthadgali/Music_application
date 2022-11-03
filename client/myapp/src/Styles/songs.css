@@ -90,3 +90,37 @@
     font-size: 20px;
     cursor: pointer;
   }
+
+  /* popup styling */
+  .popup-content {
+    /* margin: 50px;;
+    background: rgb(219, 196, 196);
+    width: 70%;
+    height: 40%;
+    padding: 5px;
+    margin-left: 50px;
+    margin-right:50 px;
+    justify-content: center; */
+   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 10%;
+    
+  }
+  /* .popup-arrow {
+    color: rgb(170, 56, 56);
+  } */
+  [role='tooltip'].popup-content {
+    width: 200px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
+  }
+  
+  .popup-overlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  [data-popup='tooltip'].popup-overlay {
+    background:transparent;
+  }

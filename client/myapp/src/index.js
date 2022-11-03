@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import "./components/navbar.css";
-import "./components/home.css";
-import "./components/songs.css";
+import "./Styles/navbar.css";
+import "./Styles/home.css";
+import "./Styles/songs.css";
 import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

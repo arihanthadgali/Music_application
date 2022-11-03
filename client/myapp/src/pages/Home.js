@@ -1,30 +1,28 @@
 import Axios from "axios";
-import React from "react";
-import ReactStars from "react-rating-stars-component";
-import Songform from "../components/Songform";
+import React, { useState } from "react";
+import ReactStars from "react-stars";
+import Songdata from "../components/AddSong";
 
 function Home() {
-  const rating = () => {
-    alert("you have changed rating");
+  const [artistdata, setartistdata] = useState([]);
+
+  const ratingChanged = (newrating) => {
+    console.log(newrating);
+    Songdata(newrating);
   };
 
   const getartistdata = () => {
     Axios.get("http://localhost:3006/addartistdata").then((response) => {
-      console.log(response);
+      setartistdata(response.data);
     });
   };
   return (
     <div>
       <h1>Top 10 Songs</h1>
-
-      <button
-        onClick={() => {
-          <Songform />;
-        }}
-      >
-        +Add Song
-      </button>
-      <button onClick={getartistdata()}>show data</button>
+      <button onClick={getartistdata}>show data</button>
+      {artistdata.map((val, i) => {
+        return <div key={i}>{val.artist_name}</div>;
+      })}
 
       <table className="home-table">
         <tbody>
@@ -42,7 +40,13 @@ function Home() {
             <td>artist</td>
             <td>dor</td>
             <td>
-              <ReactStars onChange={rating} />
+              {/* <ReactStars onChange={rating} /> */}
+              <ReactStars
+                count={5}
+                onChange={ratingChanged}
+                size={24}
+                color2={"#ffd700"}
+              />
             </td>
           </tr>
           <tr>
@@ -51,7 +55,12 @@ function Home() {
             <td>artist</td>
             <td>dor</td>
             <td>
-              <ReactStars />
+              <ReactStars
+                count={5}
+                onChange={ratingChanged}
+                size={24}
+                color2={"#ffd700"}
+              />
             </td>
           </tr>
           <tr>
@@ -60,7 +69,12 @@ function Home() {
             <td>artist</td>
             <td>dor</td>
             <td>
-              <ReactStars onChange={rating} />
+              <ReactStars
+                count={5}
+                onChange={ratingChanged}
+                size={24}
+                color2={"#ffd700"}
+              />
             </td>
           </tr>
           <tr>
@@ -69,7 +83,12 @@ function Home() {
             <td>tist</td>
             <td>dor</td>
             <td>
-              <ReactStars onChange={rating} />
+              <ReactStars
+                count={5}
+                onChange={ratingChanged}
+                size={24}
+                color2={"#ffd700"}
+              />
             </td>
           </tr>
           <tr>
@@ -78,7 +97,12 @@ function Home() {
             <td>ast</td>
             <td>dor</td>
             <td>
-              <ReactStars onChange={rating} />
+              <ReactStars
+                count={5}
+                onChange={ratingChanged}
+                size={24}
+                color2={"#ffd700"}
+              />
             </td>
           </tr>
         </tbody>
