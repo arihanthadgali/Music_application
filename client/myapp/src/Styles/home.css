@@ -2,31 +2,50 @@
     border: none;
     border-collapse: collapse;
     width: 100%;
+    margin-top: 40px;
+    
     
 }
-.home-table td {
-    height: 50px;
-    text-align: center;
+
+.home-table th{
+    background-color: #1ebe89;
+    color: white;
+    padding: 10px;
+   
+    gap: 100px;
+
+}
+.song-content{
+  padding-top:30px ;
+
+}
+.song-name{
+  padding-top: 0px;
+  position: relative;
+  left: -290px;
   
 }
-.home-table th{
-    background-color: blueviolet;
-    color: white;
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
+.rate{
+  padding-top: 0px;
+  position: relative;
+  left: 1200px;
+  
 }
-.home-table tr:nth-child(even){
-    color: #ce1b1b;
+.song-cover{
+  position: relative;
+  left: -550px;
+  padding: 0px;
 }
-button {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-  }
-  .on {
-    color: #000;
-  }
-  .off {
-    color: #ccc;
-  }
+.song-date{
+  position: relative;
+  left: 20px;
+  padding: 0px;
+}
+.artist-name{
+  position: relative;
+  left:360px;
+  padding: 0px;
+}
+.data{
+  padding: 20px;
+}

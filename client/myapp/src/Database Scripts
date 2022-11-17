@@ -1,0 +1,51 @@
+-- to create table artist_data
+CREATE TABLE `artist_data` (
+    `id` bigint NOT NULL AUTO_INCREMENT COMMENT 'Table contains artist data like Name DOB and Bio',
+    `artist_name` varchar(15) NOT NULL,
+    `date_of_birth` date NOT NULL,
+    `artist_bio` varchar(30) NOT NULL,
+    PRIMARY KEY (`id`)
+) ENGINE = InnoDB AUTO_INCREMENT = 179 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+---------------------------------------------------------------------------------------------------------------------
+--for creating song table
+CREATE TABLE `artists_songs` (
+    `id` bigint NOT NULL AUTO_INCREMENT,
+    `song_name` varchar(40) DEFAULT NULL,
+    `date_of_release` varchar(40) DEFAULT NULL,
+    `artist_id` bigint DEFAULT NULL,
+    `user_id` bigint DEFAULT NULL,
+    `user_ratings` varchar(5) DEFAULT NULL,
+    `song_cover` varchar(100) DEFAULT NULL,
+    PRIMARY KEY (`id`),
+    KEY `artist_id_idx` (`artist_id`),
+    CONSTRAINT `artist_id` FOREIGN KEY (`artist_id`) REFERENCES `artist_data` (`id`)
+) ENGINE = InnoDB AUTO_INCREMENT = 148 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+-------------------------------------------------------------------------------------------------------------------------
+--for creating user table
+CREATE TABLE `users` (
+    `id` bigint NOT NULL AUTO_INCREMENT,
+    `user_name` varchar(40) NOT NULL,
+    `email_address` varchar(25) NOT NULL,
+    PRIMARY KEY (`id`)
+) ENGINE = InnoDB AUTO_INCREMENT = 16 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+------------------------------------------------------------------------------------------------------------------------
+--for inserting values to artists_songs table
+"INSERT INTO artists_songs (song_name,date_of_release,artist_id,song_cover) VALUES(?,?,?,?)",
+[songName, DOR, id, filename],
+--for fetching top 5 records on top ratings
+select song_cover,
+    song_name,
+    date_of_release,
+    artist_name
+from artist_data a,
+    artists_songs b
+where a.id = b.artist_id
+order by user_ratings desc
+limit 5 -----------------------------------------------------------------------------------------------------------------------
+    --for fetching data from artist_data table
+SELECT *
+from artist_data;
+--------------------------------------------------------------------------------------------------------------
+--for inserting values to artist table
+"INSERT INTO artist_data(artist_name,date_of_birth,artist_bio) VALUES(?,?,?)",
+[name, dob, bio]

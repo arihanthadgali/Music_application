@@ -15,12 +15,14 @@
     display: flex;
     gap: 6rem;
 }
-.btn-add{
+.btn-song-add{
     float: left ;
     box-sizing: border-box;
     size: 200px;
     position: absolute;
-    margin-left: 30%;
+    margin-left: 40%;
+    margin-top: -30px;
+    border-radius:12px;
 }
 /* Modal design*/
 .modalBackground {
@@ -46,12 +48,21 @@
     margin-right: 18%;
     position: sticky;
 
+
   }
   
   .modalContainer .title {
     display: inline-block;
     text-align: center;
     margin-top: 10px;
+  }
+  .header button{
+    width: 32px;
+    box-sizing: border-box
+
+  }
+  .header h1{
+    margin-top: -30px;
   }
   
   
@@ -67,11 +78,10 @@
     flex: 20%;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     font-size: 1.5rem;
     text-align: center;
   }
-  
   .modalContainer .footer {
     flex: 20%;
     display: flex;
@@ -91,36 +101,55 @@
     cursor: pointer;
   }
 
-  /* popup styling */
-  .popup-content {
-    /* margin: 50px;;
-    background: rgb(219, 196, 196);
-    width: 70%;
-    height: 40%;
-    padding: 5px;
-    margin-left: 50px;
-    margin-right:50 px;
-    justify-content: center; */
-   
+  .song-container{
+    width: 50%;
+    height: 50vh;
+    background-color: rgb(219, 37, 37);
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    left: 350px;
+    background-blend-mode: lightenzzz;
+  }
+  .header{
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .header button{
+    width: 32px;
+    box-sizing: border-box
+  }
+  .artist-table{
+    background-color:blueviolet;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 0 1rem;
+    margin: 1rem;
+  }
+  .data-table{
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .data-table td{
+    height: 50px;
+    text-align: center;
+  }
+  .artist_body td{
+    height:80px;
+    text-align: center;
+    padding: 60px;
+  }
+  .add-artist{
+    float: left ;
+    box-sizing: border-box;
+    size: 200px;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 20%;
-    height: 10%;
-    
-  }
-  /* .popup-arrow {
-    color: rgb(170, 56, 56);
-  } */
-  [role='tooltip'].popup-content {
-    width: 200px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
-  }
-  
-  .popup-overlay {
-    background: rgba(0, 0, 0, 0.5);
-  }
-  [data-popup='tooltip'].popup-overlay {
-    background:transparent;
+    margin-left: 40%;
+    margin-top: 10px;
+    border-radius:12px; 
   }

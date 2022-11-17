@@ -13,7 +13,7 @@ addartist.post("/addartist", (req, res) => {
   console.log("Name" + name + "DOB" + dob + "BIO" + bio);
 
   db.query(
-    "INSERT INTO artist_data (artist_name,date_of_birth,artist_bio) VALUES(?,?,?)",
+    "INSERT INTO artist_data(artist_name,date_of_birth,artist_bio) VALUES(?,?,?)",
     [name, dob, bio],
     (err, result) => {
       if (err) {
@@ -24,7 +24,8 @@ addartist.post("/addartist", (req, res) => {
     }
   );
 });
-addartist.get("/addartistdata", (req, res) => {
+
+addartist.get("/getartistdata", (req, res) => {
   db.query("SELECT * from artist_data", (err, result) => {
     if (err) {
       console.log(err);

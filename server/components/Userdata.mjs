@@ -23,7 +23,7 @@ adduser.post("/adduser", (req, res) => {
     }
   );
 });
-adduser.get("/adduserdata", (req, res) => {
+adduser.get("/getuserdata", (req, res) => {
   db.query("SELECT user_name from users", (err, result) => {
     if (err) {
       console.log(err);
