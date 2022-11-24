@@ -47,8 +47,6 @@
     margin-left: 25%;
     margin-right: 18%;
     position: sticky;
-
-
   }
   
   .modalContainer .title {
@@ -56,16 +54,20 @@
     text-align: center;
     margin-top: 10px;
   }
+  .modalContainer button{
+    width: 40px;
+    margin-left: 480px;
+    border: 2px black solid;
+    border-radius: 12px;
+  }
   .header button{
     width: 32px;
-    box-sizing: border-box
-
+    box-sizing: border-box;
+    margin-top:10px;
   }
   .header h1{
-    margin-top: -30px;
+    margin-top: 0px;
   }
-  
-  
   .titleCloseBtn button {
     background-color: transparent;
     column-gap: 2rem;
@@ -73,14 +75,13 @@
     font-size: 25px;
     cursor: pointer;
   }
-  
   .modalContainer .body {
     flex: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
     font-size: 1.5rem;
-    text-align: center;
+    /* text-align: center; */
   }
   .modalContainer .footer {
     flex: 20%;
@@ -88,9 +89,8 @@
     justify-content: center;
     align-items: center;
   }
-  
   .modalContainer .footer button {
-    width: 150px;
+    width: 100px;
     height: 45px;
     margin: 10px;
     border: none;
@@ -100,21 +100,27 @@
     font-size: 20px;
     cursor: pointer;
   }
-
   .song-container{
-    width: 50%;
-    height: 50vh;
-    background-color: rgb(219, 37, 37);
-    position:absolute;
-    display: flex;
+    width: 600px;
+    height: 400px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex; 
     justify-content: center;
-    left: 350px;
-    background-blend-mode: lightenzzz;
+    flex-direction: column;
+    padding: 25px; 
+    margin-left: 25%;
+    margin-right: 18%;
+    position: sticky;
   }
   .header{
     display: inline-block;
     text-align: center;
     margin-top: 10px;
+  }
+  .song-body{
+    text-align: justify;
   }
   .header button{
     width: 32px;
@@ -139,17 +145,8 @@
     height: 50px;
     text-align: center;
   }
-  .artist_body td{
-    height:80px;
-    text-align: center;
-    padding: 60px;
-  }
-  .add-artist{
-    float: left ;
-    box-sizing: border-box;
-    size: 200px;
-    position: absolute;
-    margin-left: 40%;
-    margin-top: 10px;
-    border-radius:12px; 
-  }
+ 
+ 
+
+  
+ 

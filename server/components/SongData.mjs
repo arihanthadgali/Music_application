@@ -100,7 +100,7 @@ addsong.get("/topsongs", (req, res) => {
   db.query(
     //"select song_cover,song_name,date_of_release,artist_name from artist_data a,artists_songs b,users c where a.id = b.artist_id and b.user_id=c.id",
     //"select * from artists_songs order by user_ratings desc limit 5",
-    "select id,song_cover,song_name,date_of_release,artist_name,user_ratings from artist_data a,artists_songs b where a.id = b.artist_id order by user_ratings desc limit 5",
+    "select song_id,song_cover,song_name,date_of_release,artist_name,user_ratings from artist_data a,artists_songs b where a.id = b.artist_id order by user_ratings desc limit 5",
 
     (err, result) => {
       if (err) {

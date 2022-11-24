@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import Axios from "axios";
+import "../Styles/artists.css";
 
 function Songdata({ closeSong }) {
   const [songName, setSongName] = useState("");
@@ -22,7 +23,6 @@ function Songdata({ closeSong }) {
   }, []);
 
   const Song = (e) => {
-    //e.preventDefault();
     const formData = new FormData();
     formData.append("photo", filename);
     formData.append("songName", songName);
@@ -43,7 +43,7 @@ function Songdata({ closeSong }) {
   return (
     <div className="song-container">
       <div className="song-content">
-        <div className="header">
+        <div className="song-header">
           <button
             onClick={() => {
               closeSong(false);
@@ -51,11 +51,12 @@ function Songdata({ closeSong }) {
           >
             X
           </button>
-          <h1>Adding new song</h1>
+          <h1 className="add-header">Adding new song</h1>
         </div>
         <div className="song-body">
           <label className="label1">Song Name</label>
           <input
+            className="input-text"
             type="text"
             onChange={(event) => {
               setSongName(event.target.value);
@@ -64,6 +65,7 @@ function Songdata({ closeSong }) {
           <br />
           <label className="label2">Date Of Release</label>
           <input
+            className="input-date"
             type="date"
             onChange={(event) => {
               setDOR(event.target.value);
@@ -86,7 +88,12 @@ function Songdata({ closeSong }) {
           </select>
           <br />
           <label className="label4"> Artwork</label>
-          <input type="file" name="photo" onChange={saveFile}></input>
+          <input
+            className="input-type"
+            type="file"
+            name="photo"
+            onChange={saveFile}
+          ></input>
         </div>
 
         <br />

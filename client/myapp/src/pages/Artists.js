@@ -45,9 +45,9 @@ function Artists() {
                 <table className="artist_table">
                   <tbody className="artist_body">
                     <tr>
-                      <td>{val.artist_name}</td>
-                      <td>{val.date_of_birth}</td>
-                      <td>{val.artist_bio}</td>
+                      <td className="artist-name-data">{val.artist_name}</td>
+                      <td className="artist-dob-data">{val.date_of_birth}</td>
+                      <td className="artist-bio-data">{val.artist_bio}</td>
                     </tr>
                   </tbody>
                 </table>

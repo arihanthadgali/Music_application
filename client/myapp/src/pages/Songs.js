@@ -63,30 +63,35 @@ function Songs() {
       {songdata.length > 0
         ? songdata.map((val, i) => {
             return (
-              <div key={i} className="data">
-                <div className="song-cover">
-                  <img
-                    src={`http://localhost:3006/uploads/${val.song_cover}`}
-                    alt=""
-                    width="80"
-                    height="60"
-                  ></img>
-                </div>
-                <div className="song-name">{val.song_name}</div>
-                <div className="song-date">{val.date_of_release}</div>
-                <div className="artist-name">{val.artist_name}</div>
-                <div className="rate">
-                  <ReactStars
-                    count={5}
-                    value={val.user_ratings}
-                    onChange={(e) => {
-                      ratingChanged(e);
-                      idvalue(val.song_id);
-                    }}
-                    size={24}
-                    color2={"#ffd700"}
-                  />
-                </div>
+              <div key={i} className="song-content">
+                <table className="data-content">
+                  <tr>
+                    <td className="song-cover">
+                      <img
+                        src={`http://localhost:3006/uploads/${val.song_cover}`}
+                        alt=""
+                        width="70"
+                        height="50"
+                      ></img>
+                    </td>
+
+                    <td className="song-name">{val.song_name}</td>
+                    <td className=" song-date">{val.date_of_release}</td>
+                    <td className="artist-name">{val.artist_name}</td>
+                    <td className="rate">
+                      <ReactStars
+                        count={5}
+                        value={val.user_ratings}
+                        onChange={(e) => {
+                          ratingChanged(e);
+                          idvalue(val.song_id);
+                        }}
+                        size={24}
+                        color2={"#ffd700"}
+                      />
+                    </td>
+                  </tr>
+                </table>
               </div>
             );
           })
