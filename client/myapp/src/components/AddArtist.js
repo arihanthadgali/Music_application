@@ -30,7 +30,7 @@ function AddArtist({ closeartist }) {
           <h1>Adding a new Artist</h1>
         </div>
         <div className="body">
-          <label className="Aname">Name :</label>
+          <label className="Aname">Name </label>
           <input
             type="text"
             onChange={(event) => {
@@ -38,7 +38,7 @@ function AddArtist({ closeartist }) {
             }}
           ></input>
           <br />
-          <label className="Adate">DOB:</label>
+          <label className="Adate">DOB </label>
           <input
             type="date"
             onChange={(event) => {
@@ -46,7 +46,7 @@ function AddArtist({ closeartist }) {
             }}
           ></input>
           <br />
-          <label className="Abio">Bio:</label>
+          <label className="Abio">Bio </label>
           <input
             type="image-alt"
             onChange={(event) => {
@@ -56,7 +56,14 @@ function AddArtist({ closeartist }) {
         </div>
 
         <div className="footer">
-          <button onClick={artist}>Add</button>
+          <button
+            onClick={() => {
+              artist();
+              closeartist(false);
+            }}
+          >
+            Add
+          </button>
           <button
             onClick={() => {
               closeartist(false);

@@ -20,13 +20,24 @@
   .artist_body td{
     height:80px;
     text-align: center;
-    padding: 60px;
+    padding-left: 250px;
   }
   .artist-name-data{
-    padding-left: 200px;
+    left: 0px;
+    padding: 10px;
+    text-align: center;
   }
   .artist-dob-data{
-    padding-left: 350px;
+    position: absolute;
+    left: 450px;
+    padding: 20px;
+    text-align: center;
+  }
+  .artist-bio-data{
+    padding: 20px;
+    position: absolute;
+    left: 800px;
+    text-align: center;
   }
   .add-artist{
     float: left ;
@@ -38,26 +49,16 @@
     border-radius:12px; 
   }
 
-  .artist-name-data{
-    left: 600px;
-  }
+ 
   .Aname{
     padding: 50px;
   }
   .Adate{
-     padding: 25px;
+    padding: 60px;
+    margin-left: -74px;
   }
   .Abio{
-    padding: 65px;
+    padding: 75px;
+    margin-left: -25px;
   }
-  .artist_body td{
-    height:80px;
-    text-align: center;
-    padding-left: 190px;
-  }
-  .artist-name-data{
-    padding-left: 115px;
-  }
-  .artist-dob-data{
-    padding-left: 350px;
-  }
+  

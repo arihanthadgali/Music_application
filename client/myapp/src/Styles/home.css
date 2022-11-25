@@ -7,12 +7,12 @@
 .home-table th{
     background-color: #1ebe89;
     color: white;
-    padding: 10px;
+    padding-left: 130px;
     gap: 100px;
 }
 
 .song-header button{
-  margin-left: 400px;
+  margin-left: 500px;
   border: 2px black solid;
   border-radius: 8px;
   width: 40px;
@@ -25,12 +25,11 @@
   position: relative;
   left: 240px;
   text-align: center;
-  
 }
 .rate{
   padding-top: 0px;
-  position: relative;
-  left: 880px;
+  position: absolute;
+  left: 1200px;
   text-align: center;
   
 }
@@ -41,14 +40,14 @@
   text-align: center;
 }
 .song-date{
-  position: relative;
-  left: 490px;
+  position: absolute;
+  left: 650px;
   padding: 0px;
   text-align: center;
 }
 .artist-name{
-  position: relative;
-  left:750px;
+  position: absolute;
+  left:980px;
   padding: 0px;
   text-align: center;
 }

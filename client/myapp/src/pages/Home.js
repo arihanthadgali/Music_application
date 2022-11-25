@@ -66,7 +66,7 @@ function Home() {
                       </td>
 
                       <td className="song-name">{val.song_name}</td>
-                      <td className=" song-date">{val.date_of_release}</td>
+                      <td className="song-date">{val.date_of_release}</td>
                       <td className="artist-name">{val.artist_name}</td>
                       <td className="rate">
                         <ReactStars
